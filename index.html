@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDIA 2294 Term Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
@@ -13,23 +14,25 @@
     <header class="site-header">
         <div class="container">
             <div class="site-header__wrapper">
-                <!-- logo -->
-                <div class="site-header__logo">
-                    <img src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                <div class="flex">
+                    <!-- logo -->
+                    <div class="site-header__logo">
+                        <img src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                    </div>
+                    <!-- navigation -->
+                    <nav class="site-header__menu nav-menu">
+                        <ul class="flex">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Flavors</a></li>
+                            <li><a href="#">Our team</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </nav>
+                    <!-- hamburger -->
+                    <button class="hamburger">
+                        
+                    </button>
                 </div>
-                <!-- navigation -->
-                <nav class="site-header__menu nav-menu">
-                    <ul>
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Flavors</a></li>
-                        <li><a href="#">Our team</a></li>
-                        <li><a href="#">Contact</a></li>
-                    </ul>
-                </nav>
-                <!-- hamburger -->
-                <button class="hamburger">
-
-                </button>
             </div>
         </div>
 
@@ -37,9 +40,15 @@
 
     <!-- main -->
     <main>
-        <!-- heroW -->
-        <section>
-
+        <!-- hero -->
+        <section class="home-banner">
+            <div class=" container">
+                <div class="home-banner__content grid">
+                    <img src="" alt="">
+                    <h1>The <span>Good Froyo</span></h1>
+                    <p>Everything is flavorful. Try our one million flavors!</p>
+                </div>
+            </div>
         </section>
     </main>
 

@@ -1,0 +1,29 @@
+.grid {
+    display: grid;
+    justify-content: center;
+}
+
+.home-banner__content {
+    width: max(375px, 90vw);
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 2rem;
+    grid-gap: 2rem;
+    grid-template-areas: 
+        "heading"
+        "froyoImg"
+        "froyoText";
+}
+
+@media screen and (min-width: 834px) {
+    .home-banner__content {
+        height: auto;
+        gap: 1.5rem;
+        grid-template-areas: 
+            "froyoImg heading"
+            "froyoImg froyoText";
+            margin-top: 0;
+            margin-bottom: 5rem;
+    }
+}
