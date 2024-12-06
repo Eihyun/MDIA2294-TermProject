@@ -54,6 +54,9 @@ img {
 
 .grid {
     display: grid;
+    width: 320px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 16px;
 }
 
 
@@ -166,8 +169,11 @@ img {
 
 .flavor {
     width: auto;
-    grid-column: 1 / 3;
+    grid-column: span 2;
     background-color: var(--skyblue);
+    font-weight: 500;
+    font-size: 0.7rem;
+    text-align: center;
 }
 
 
