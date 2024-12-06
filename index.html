@@ -4,20 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDIA 2294 Term Project</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="../css/normalize.css">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://use.typekit.net/qwo2ans.css">
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
 
     <!-- header -->
     <header class="site-header">
         <div class="container">
+
             <div class="site-header__wrapper">
                 <div class="flex">
                     <!-- logo -->
                     <div class="site-header__logo">
-                        <img src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                        <img class="site-header__logo-img" src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
                     </div>
                     <!-- navigation -->
                     <nav class="site-header__menu nav-menu">
@@ -30,12 +32,13 @@
                     </nav>
                     <!-- hamburger -->
                     <button class="hamburger">
-                        
+                        <ion-icon class="menu-icon" name="menu-outline"></ion-icon>
+                        <ion-icon class="close-icon hide" name="close-outline"></ion-icon>
                     </button>
                 </div>
             </div>
+            
         </div>
-
     </header>
 
     <!-- main -->
@@ -44,19 +47,40 @@
         <section class="home-banner">
             <div class=" container">
                 <div class="home-banner__content grid">
-                    <img src="" alt="">
+                    <img class="home-banner__img" src="images/Banner_small.png" alt="">
                     <h1>The <span>Good Froyo</span></h1>
-                    <p>Everything is flavorful. Try our one million flavors!</p>
+                    <p>Everything is flavorful. <span>Try our one million flavors!</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- menu -->
+        <section class="home-menu">
+            <div class="container">
+                <div class="home-menu__content flex">
+                    <div class="home-menu__content-title">
+                        <img src="images/NewFlavors.png" alt="">
+                    </div>
+                    <div class="home-menu__content-flavors grid">
+                        <div class="flavor"></div>
+                        <div class="flavor"></div>
+                    </div>
+
                 </div>
             </div>
         </section>
     </main>
 
 
+
     <!-- footer -->
     <footer>
 
     </footer>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
