@@ -6,8 +6,9 @@
     <title>MDIA 2294 Term Project</title>
     <link rel="stylesheet" href="https://use.typekit.net/qwo2ans.css">
     <link rel="stylesheet" href="../css/reset.css">
-    <!-- <link rel="stylesheet" href="../css/style.css"> -->
     <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+
 </head>
 <body>
 
@@ -47,7 +48,11 @@
         <section class="home-banner">
             <div class=" container">
                 <div class="home-banner__content">
-                    <img class="home-banner__img" src="images/Banner_small.png" alt="">
+                    <picture class="home-banner__picture">
+                        <source media="(min-width: 1440px)" srcset="images/Banner_large.png">
+                        <source media="(min-width: 834px)" srcset="images/Banner_medium.png">
+                        <img class="home-banner__img" src="images/Banner_small.png" alt="Banner image">
+                    </picture>
                     <h1>The <span>Good Froyo</span></h1>
                     <p>Everything is flavorful. <span>Try our one million flavors!</span></p>
                 </div>
@@ -62,15 +67,22 @@
                         <img src="images/NewFlavors.png" alt="">
                     </div>
                     <div class="home-menu__content-flavors grid">
-                        <div class="flavor">True potential as brilliant</div>
-                        <div class="flavor">No traffic</div>
-                        <div class="flavor">Sunshine</div>
-                        <div class="flavor">Peace</div>
+                        <!-- flavors will be added by JS -->
                     </div>
-
+                    <button class="flavor-menu-button">SEE MORE</button>
                 </div>
             </div>
         </section>
+
+
+        <!-- Slide -->
+        <section class="home-slider">
+            <div class="container">
+                <!-- flickity -->
+
+            </div>
+        </section>
+
     </main>
 
 
@@ -80,8 +92,14 @@
 
     </footer>
 
+    <!-- JS for icons -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+    <!-- JS for flickity -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- My JS -->
     <script src="js/script.js"></script>
 
 </body>

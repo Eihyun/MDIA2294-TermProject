@@ -30,9 +30,9 @@ body {
     background: var(--ivory);
 }
 
-header, main, footer {
+header, footer {
     width: 100%;
-    max-width: 375px;
+    max-width: 320px;
 }
 
 img {
@@ -41,9 +41,9 @@ img {
 }
 
 .container {
-    width: 320px;
+    max-width: 375px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .flex {
@@ -59,6 +59,10 @@ img {
     grid-gap: 16px;
 }
 
+button {
+    border: none;
+    font: inherit;
+}
 
 /* header */
 
@@ -145,8 +149,18 @@ img {
     display: inline-block;
 }
 
-.home-banner__content img {
+.home-banner__content picture {
     grid-area: froyoImg;
+}
+
+.home-banner__picture {
+    width: 100%;
+    display: block;
+}
+
+.home-banner__picture img {
+    width: 100%;
+    height: auto;
 }
 
 .home-banner__content p {
@@ -167,34 +181,90 @@ img {
     flex-direction: column;
 }
 
+.home-menu__content-title {
+    margin-bottom: 2rem;
+}
+
 .flavor {
     width: auto;
     grid-column: span 2;
-    background-color: var(--skyblue);
+    background-color: rgba(106, 198, 213, 0.5);
     font-weight: 500;
     font-size: 0.7rem;
     text-align: center;
+    padding: 0.5rem 0;
+    letter-spacing: -0.5px;
 }
 
+.flavor-menu-button {
+    margin: 3rem 0;
+    background-color: var(--mulberry);
+    transition: all .2s linear;
+    font-family: var(--primaryFont);
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: var(--white);
+    max-width: 250px;
+    padding: 0.5rem 2rem 0.25rem;
+    border-radius: 10px;
+    box-shadow: 6px 6px rgba(181, 92, 167, 0.3);
+    transition: box-shadow 0.1s ease;
+}
 
+.flavor-menu-button.clicked {
+    box-shadow: 3px 3px rgba(181, 92, 167, 0.3);
+}
+
+/* Slide */
+
+.home-slider {
+    background-color: var(--mulberry);
+    width: 100vw;
+    height: 700px;
+    position: relative;
+
+}
 
 
 
 /* Tablet */
 @media (min-width: 834px) {
+    header, footer {
+        max-width: 768px;
+    }
+    
+    .container {
+        max-width: 768px;
+    }
+
+    .grid {
+        width: 768px;
+        grid-template-columns: repeat(12, 1fr);
+    }
+    
     .home-banner__content {
         gap: 1.5rem;
         grid-template-areas: 
             "froyoImg heading"
             "froyoImg froyoText";
-        margin-top: 0;
-        margin-bottom: 5rem;
+    }
+
+    .flavor {
+        grid-column: span 3;
     }
 }
 
 
 /* Desktop */
 @media (min-width: 1440px) {
+    header, footer {
+        max-width: 1280px;
+    }
+
+    .container {
+        max-width: 1280px;
+    }
+
     .hamburger {
         display: none;
     }
@@ -209,5 +279,10 @@ img {
 
     .nav-menu ul {
         flex-direction: row;
+    }
+
+    .grid {
+        width: 1280px;
+        grid-gap: 20px;
     }
 }
