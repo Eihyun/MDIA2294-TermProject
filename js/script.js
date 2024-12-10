@@ -3,13 +3,13 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const menuIcon = document.querySelector('.menu-icon');
-const closeIcon = document.querySelector('.close-icon')
+const closeIcon = document.querySelector('.close-icon');
 
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
     menuIcon.classList.toggle('hide');
     closeIcon.classList.toggle('hide');
-})
+});
 
 // Add flavors list
 // array of flavor names
@@ -55,7 +55,7 @@ function addFlavors() {
         flavorDiv.textContent = flavor;
         flavorContainer.appendChild(flavorDiv);
     });
-}
+};
 
 // call the function when the document is loaded
 document.addEventListener('DOMContentLoaded', addFlavors);
@@ -72,3 +72,20 @@ menuBtn.addEventListener('click', function() {
         this.classList.remove('clicked');
     }, 200);
 });
+
+// Flickity
+var elem = document.querySelector('carousel');
+var flkty = new Flickity( elem, {
+    // options
+    cellAlign: 'left',
+    contain: true,
+    groupCells: '80%'
+});
+
+// Leaflet
+var map = L.map('map').setView([51.505, -0.09], 13);
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([51.5, -0.09]).addTo(map);

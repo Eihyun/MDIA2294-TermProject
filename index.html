@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
 
 </head>
 <body>
@@ -78,14 +81,45 @@
         <!-- Slide -->
         <section class="home-slider">
             <div class="container">
+                <div class="home-slider__text">
+                    <h3>TOP PICKS</h3>
+                    <p>Explore the best flavors</p>
+                </div>
                 <!-- flickity -->
+                <div class="carousel" data-flickity>
+                    <div class="carousel-cell">
+                        <img src="images/Achieved_goals.png" alt="">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/Full_cellphone_battery.png" alt="">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/Baklava.png" alt="">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/Caramel_corn.png" alt="">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/Bubble_wrap.png" alt="">
+                    </div>
+                    <div class="carousel-cell">
+                        <img src="images/Good_online_date.png" alt="">
+                    </div>
 
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Map -->
+        <section class="home-map">
+            <div class="container">
+                <h2>Location</h2>
+                <div id="map"></div>
             </div>
         </section>
 
     </main>
-
-
 
     <!-- footer -->
     <footer>
@@ -98,6 +132,11 @@
 
     <!-- JS for flickity -->
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+
+    <!-- JS for Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
 
     <!-- My JS -->
     <script src="js/script.js"></script>

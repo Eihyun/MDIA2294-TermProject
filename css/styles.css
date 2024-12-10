@@ -220,11 +220,36 @@ button {
 .home-slider {
     background-color: var(--mulberry);
     width: 100vw;
-    height: 700px;
+    height: 500px;
     position: relative;
-
+    padding: 1rem 0;
 }
 
+.home-slider__text {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.home-slider__text h3 {
+    color: var(--white);
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.3rem;
+}
+
+.home-slider__text p {
+    color: var(--skyblue);
+}
+
+.carousel-cell {
+    width: 50%;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Map */
+#map {
+    height: 180px;
+}
 
 
 /* Tablet */
@@ -251,6 +276,11 @@ button {
 
     .flavor {
         grid-column: span 3;
+    }
+
+    .home-slider {
+        height: 800px;
+        padding: 2rem 0;
     }
 }
 
@@ -285,4 +315,12 @@ button {
         width: 1280px;
         grid-gap: 20px;
     }
+
+    .home-slider {
+        height: 1300px;
+        padding: 5rem 0;
+    }
+
+
+
 }
