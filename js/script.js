@@ -74,13 +74,16 @@ menuBtn.addEventListener('click', function() {
 });
 
 // Flickity
-var elem = document.querySelector('carousel');
+
+var elem = document.querySelector('.carousel');
 var flkty = new Flickity( elem, {
     // options
     cellAlign: 'left',
     contain: true,
-    groupCells: '80%'
+    groupCells: '80%',
+    watchCSS: true
 });
+
 
 // Leaflet
 var map = L.map('map').setView([51.505, -0.09], 13);

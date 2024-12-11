@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDIA 2294 Term Project</title>
     <link rel="stylesheet" href="https://use.typekit.net/qwo2ans.css">
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
@@ -114,15 +114,48 @@
         <!-- Map -->
         <section class="home-map">
             <div class="container">
-                <h2>Location</h2>
+                <div class="home-map__title">
+                    <h2>Location</h2>
+                </div>
                 <div id="map"></div>
+                <div class="home-map__content flex">
+                    <div class="home-map__content-address">
+                        <p>Neighborhood 12358W, The Good Place</p>
+                    </div>
+                    <div class="home-map__content-info grid">
+                        <ion-icon name="call" class="phone-icon"></ion-icon>
+                        <ion-icon name="mail-open" class="mail-icon"></ion-icon>
+                        <p class="phone-info">123-456-7890</p>
+                        <p class="mail-info">michael@thegoodplace.com</p>
+                    </div>
+                </div>
             </div>
         </section>
 
     </main>
 
     <!-- footer -->
-    <footer>
+    <footer class="site-footer">
+        <div class="site-footer__wrapper flex">
+
+            <div class="site-footer__logo">
+                <img class="site-footer__logo-img" src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+            </div>
+
+            <div class="site-footer__text">
+                <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC.</p>
+            </div>
+
+            <div class="site-footer__icons grid">
+                <ion-icon name="logo-facebook"></ion-icon>
+
+                <ion-icon name="logo-twitter"></ion-icon>
+
+                <ion-icon name="logo-instagram"></ion-icon>
+
+            </div>
+        </div>
+
 
     </footer>
 

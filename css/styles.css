@@ -6,6 +6,7 @@
     --gunmetal: #282D32;
     --white: #fff;
     --primaryFont: "nunito", sans-serif;
+    --secondaryFont: "sweet-sans-pro", sans-serif;
 }
 
 * {
@@ -23,16 +24,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-family: "sweet-sans-pro", sans-serif;
+    font-family: var(--secondaryFont);
     font-weight: 700;
     font-style: normal;
     line-height: 1.5;
     background: var(--ivory);
-}
-
-header, footer {
-    width: 100%;
-    max-width: 320px;
 }
 
 img {
@@ -55,7 +51,7 @@ img {
 .grid {
     display: grid;
     width: 320px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 16px;
 }
 
@@ -64,16 +60,22 @@ button {
     font: inherit;
 }
 
-/* header */
+/* header, footer*/
+header, footer {
+    width: 100%;
+    max-width: 320px;
+}
 
-.site-header {
+.site-header, .site_footer {
     position: relative;
     padding: 2rem 0;
 }
 
-.site-header__logo {
+.site-header__logo, .site-footer__logo {
     max-width: 100px;
 }
+
+/* navigation bar */
 
 .nav-menu {
     position: fixed;
@@ -106,7 +108,7 @@ button {
     padding: 0.1rem;
     font-size: 2rem;
     border: none;
-    border-radius: 10px;
+    border-radius: 30%;
     background: var(--mulberry);
     cursor: pointer;
     z-index: 10;
@@ -118,6 +120,25 @@ button {
 
 .hide {
     display: none;
+}
+
+/* footer */
+.site-footer {
+    padding-bottom: 5rem;
+}
+
+.site-footer__wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.site-footer__icons > ion-icon {
+    background-color: var(--poppy);
+    font-size: 1.3rem;
+    padding: 0.6rem;
+    border-radius: 50%;
+    color: var(--white);
 }
 
 /* banner */
@@ -216,7 +237,6 @@ button {
 }
 
 /* Slide */
-
 .home-slider {
     background-color: var(--mulberry);
     width: 100vw;
@@ -240,6 +260,12 @@ button {
     color: var(--skyblue);
 }
 
+/* flickity on by default */
+.carousel:after {
+    content: 'flickity';
+    display: none;
+}
+
 .carousel-cell {
     width: 50%;
     margin-right: 10px;
@@ -247,9 +273,64 @@ button {
 }
 
 /* Map */
-#map {
-    height: 180px;
+.home-map {
+    height: 650px;
+    margin: 2rem 0;
 }
+
+.home-map__title {
+    font-family: var(--primaryFont);
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.home-map__title h2 {
+    color: var(--mulberry);
+}
+
+#map {
+    height: 20vh;
+    margin-bottom: 2rem;
+}
+
+.home-map__content {
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.home-map__content-address {
+    width: 320px;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+.home-map__content-info {
+    justify-items: center;
+}
+
+.home-map__content-info ion-icon {
+    grid-column: 1 / 2;
+    font-size: 1.5rem;
+}
+
+.home-map__content-info p {
+    grid-column: 2 / 5;
+}
+
+.home-map__content-info > ion-icon, .home-map__content-info > p {
+    text-align: center;
+}
+
+.mail-icon {
+    order: 1;
+}
+
+.mail-info {
+    order: 2;
+}
+
 
 
 /* Tablet */
@@ -257,7 +338,7 @@ button {
     header, footer {
         max-width: 768px;
     }
-    
+
     .container {
         max-width: 768px;
     }
@@ -266,7 +347,8 @@ button {
         width: 768px;
         grid-template-columns: repeat(12, 1fr);
     }
-    
+
+    /* banner */
     .home-banner__content {
         gap: 1.5rem;
         grid-template-areas: 
@@ -274,16 +356,67 @@ button {
             "froyoImg froyoText";
     }
 
-    .flavor {
-        grid-column: span 3;
+    .home-banner__content h1 span {
+        font-size: 4.5rem;
     }
 
+    .home-banner__content p {
+        font-size: 2rem;
+    }
+    
+    .home-banner__content p span {
+        display: inline-block;
+        font-weight: 600;
+        font-size: 1.2rem;
+    }
+
+    /* flavor */
+    .flavor {
+        grid-column: span 3;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+
+    /* slide */
     .home-slider {
         height: 800px;
         padding: 2rem 0;
     }
-}
 
+    .home-slider__text h3, .home-slider__text p  {
+        font-size: 1.2rem;
+    }
+
+    /* map */
+    #map {
+        height: 30vh;
+    }
+
+    .home-map__content {
+        flex-direction: row;
+    }
+
+    .home-map__content-info {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+
+    .home-map__content-address {
+        width: 70%;
+        font-size: 1.4rem;
+    }
+
+    /* footer */
+    .site-footer__wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .site-footer__text {
+        width: 70%;
+    }
+
+}
 
 /* Desktop */
 @media (min-width: 1440px) {
@@ -311,16 +444,80 @@ button {
         flex-direction: row;
     }
 
+    .nav-menu ul li a {
+        color: var(--gunmetal);
+        font-family: var(--secondaryFont);
+        font-size: 1.3rem;
+    }
+
     .grid {
         width: 1280px;
         grid-gap: 20px;
     }
 
+    /* banner */
+    .home-banner__content h1 {
+        font-size: 3rem;
+    }
+
+    .home-banner__content p {
+        font-size: 2.5rem;
+    }
+    
+    .home-banner__content p span {
+        display: inline-block;
+        font-weight: 700;
+        font-size: 1.5rem;
+    }
+
+    /* flavor */
+    .flavor {
+        font-size: 1.3rem;
+        font-weight: 600;
+    }
+
+    /* slider */
+    .home-slider__text h3, .home-slider__text p  {
+        font-size: 1.7rem;
+    }
+
     .home-slider {
-        height: 1300px;
+        height: 650px;
         padding: 5rem 0;
     }
 
+    .carousel {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+    }
 
+    /* disable flickity for desktop */
+    .carousel:after {
+        content: '';
+    }
 
+    .carousel-cell {
+        width: 15%;
+    }
+
+    /* map */
+    .home-map__content-address, .phone-info, .mail-info  {
+        font-size: 1.5rem;
+    }
+
+    /* footer */
+    .site-footer__wrapper {
+        flex-wrap: no-wrap;
+        padding-top: 8vh;
+    }
+
+    .site-footer__text {
+        width: 50%;
+    }
+
+    .site-footer__icons.grid {
+        grid-template-columns: repeat(6, 1fr);
+        width: 30%;
+    }
 }
