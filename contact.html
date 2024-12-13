@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDIA 2294 Term Project</title>
     <link rel="stylesheet" href="https://use.typekit.net/qwo2ans.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
@@ -49,71 +48,48 @@
 
     <!-- main -->
     <main>
-        <!-- hero -->
-        <section class="home-banner">
-            <div class=" container">
-                <div class="home-banner__content">
-                    <picture class="home-banner__picture">
-                        <source media="(min-width: 1440px)" srcset="images/Banner_large.png">
-                        <source media="(min-width: 834px)" srcset="images/Banner_medium.png">
-                        <img class="home-banner__img" src="images/Banner_small.png" alt="Banner image">
-                    </picture>
-                    <h1>The <span>Good Froyo</span></h1>
-                    <p>Everything is flavorful. <span>Try our one million flavors!</span></p>
+        
+
+        <!-- Parallax-->
+        <section class="parallax">
+            
+            <div class="parallax-window" data-parallax="scroll">
+                <div class="parallax-slider">
+                    <span>© Stage Runner, 2023</span><br>
+                    <span>© M. Cody Pickens Photography 2014</span>
+                    <img src="images/European-St.jpeg" srcset="images/Background_wavy.png 400w, images/European-St.jpeg 800w" sizes="100vw">
                 </div>
+                
             </div>
+
+
         </section>
 
-        <!-- menu -->
-        <section class="home-menu">
+
+
+        <!-- Map -->
+        <section class="home-map">
             <div class="container">
-                <div class="home-menu__content flex">
-                    <div class="home-menu__content-title">
-                        <img src="images/NewFlavors.png" alt="">
+                <div class="home-map__title">
+                    <h2>Location</h2>
+                </div>
+                <div id="map"></div>
+                <div class="home-map__content flex">
+                    <div class="home-map__content-address">
+                        <p>Neighborhood 12358W, The Good Place</p>
                     </div>
-                    <div class="home-menu__content-flavors grid">
-                        <!-- flavors will be added by JS -->
+                    <div class="home-map__content-info grid">
+                        <ion-icon name="call" class="phone-icon"></ion-icon>
+                        <ion-icon name="mail-open" class="mail-icon"></ion-icon>
+                        <p class="phone-info">123-456-7890</p>
+                        <p class="mail-info">michael@thegoodplace.com</p>
                     </div>
-                    <button class="flavor-menu-button">
-                        <a href="flavors.html">
-                            SEE MORE
-                        </a>
-                    </button>
                 </div>
             </div>
         </section>
 
-        <!-- Slide -->
-        <section class="home-slider">
-            <div class="container">
-                <div class="home-slider__text">
-                    <h3>TOP PICKS</h3>
-                    <p>Explore the best flavors</p>
-                </div>
-                <!-- flickity -->
-                <div class="carousel" data-flickity>
-                    <div class="carousel-cell">
-                        <img src="images/Achieved_goals.png" alt="">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="images/Full_cellphone_battery.png" alt="">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="images/Baklava.png" alt="">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="images/Caramel_corn.png" alt="">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="images/Bubble_wrap.png" alt="">
-                    </div>
-                    <div class="carousel-cell">
-                        <img src="images/Good_online_date.png" alt="">
-                    </div>
 
-                </div>
-            </div>
-        </section>
+
 
 
     </main>
@@ -149,16 +125,17 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- JS for flickity -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-
     <!-- JS for Leaflet -->
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
 
+    <!-- JS for jQuery & Parallax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="parallax.js-1.5.0/parallax.js"></script>
+
     <!-- My JS -->
-    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 
 </body>
 </html>

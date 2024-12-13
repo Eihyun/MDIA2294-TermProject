@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MDIA 2294 Term Project</title>
     <link rel="stylesheet" href="https://use.typekit.net/qwo2ans.css">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
     crossorigin=""/>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/styles.css">
 
 </head>
 <body>
@@ -23,15 +23,17 @@
                 <div class="flex">
                     <!-- logo -->
                     <div class="site-header__logo">
-                        <img class="site-header__logo-img" src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                        <a href="index.html">
+                            <img class="site-header__logo-img" src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                        </a>
                     </div>
                     <!-- navigation -->
                     <nav class="site-header__menu nav-menu">
                         <ul class="flex">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Flavors</a></li>
-                            <li><a href="#">Our team</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="flavors.html">Flavors</a></li>
+                            <!-- <li><a href="#">Our team</a></li> -->
+                            <li><a href="contact.html">Contact</a></li>
                         </ul>
                     </nav>
                     <!-- hamburger -->
@@ -48,6 +50,49 @@
     <!-- main -->
     <main>
 
+        <section class="search">
+            <div class="container">
+                <div class="search-bar flex">
+                    
+                    <!-- search -->
+                    <!-- close button -->
+                    <div class="close-btn">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </div>
+                    
+                    <!-- search wrapper -->
+                    <div class="search-wrapper">
+                        <!-- search button -->
+                        <div class="search-btn">
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                        <!-- search box -->
+                        <div class="search-data">
+                            <input type="text" required>
+                            <div class="line"></div>
+                            <label for="">Type to search..</label>
+                            <ion-icon name="search-outline"></ion-icon>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- menu -->
+        <section class="home-menu">
+            <div class="container">
+                <div class="home-menu__content flex">
+                    <div class="home-menu__content-title">
+                        <img src="images/NewFlavors.png" alt="">
+                    </div>
+                    <div class="home-menu__content-flavors grid">
+                        <!-- flavors will be added by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
     </main>
 
@@ -55,8 +100,11 @@
     <footer class="site-footer">
         <div class="site-footer__wrapper flex">
 
+
             <div class="site-footer__logo">
-                <img class="site-footer__logo-img" src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                <a href="index.html">
+                    <img class="site-footer__logo-img" src="images/Logo.png" alt="A logo for Yogurt Yoghurt Yogurte">
+                </a>
             </div>
 
             <div class="site-footer__text">
@@ -80,16 +128,12 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- JS for flickity -->
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-    <!-- JS for Leaflet -->
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
+    <!-- Jquery for search bar -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 
     <!-- My JS -->
-    <script src="js/script.js"></script>
+    <script src="js/flavors.js"></script>
 
 </body>
 </html>
