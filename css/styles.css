@@ -441,18 +441,17 @@ header, footer {
 
 /* Parallax */
 .parallax-window {
-	min-height: 600px;
+    min-height: 80vw;
+    width: 100vw;
 	background: transparent;
     overflow: hidden;
 }
 
-.parallax-slider span {
-    position: relative;
-    height: 100%;
-    bottom: -83%;
-    left: 36%;
-    font-size: 0.6rem;
-    color: var(--white);
+.parallax > span {
+    display: block;
+    font-size: 0.7em;
+    text-align: center;
+    color: var(--skyblue);
 }
 
 
@@ -514,6 +513,11 @@ header, footer {
 
     .home-slider__text h3, .home-slider__text p  {
         font-size: 1.2rem;
+    }
+
+    /* parallax */
+    .parallax-window {
+        min-height: 60vw;
     }
 
     /* map */
@@ -638,6 +642,11 @@ header, footer {
 
     .carousel-cell {
         width: 15%;
+    }
+
+    /* parallax */
+    .parallax-window {
+        min-height: 40vw;
     }
 
     /* map */
