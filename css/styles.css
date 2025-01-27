@@ -601,6 +601,7 @@ header, footer {
     /* banner */
     .home-banner__content h1 {
         font-size: 3rem;
+        padding-top: 100px;
     }
 
     .home-banner__content p {
